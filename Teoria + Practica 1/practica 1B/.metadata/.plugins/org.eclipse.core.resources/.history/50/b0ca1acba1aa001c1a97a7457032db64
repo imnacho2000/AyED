@@ -1,0 +1,4 @@
+
+public class Datos {
+	private int Maximo, Minimo, Promedio;
+}

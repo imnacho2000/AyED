@@ -1,0 +1,5 @@
+
+public class Alumno {
+	private String nombre, apellido, email, direccion;
+	private int comision;
+}

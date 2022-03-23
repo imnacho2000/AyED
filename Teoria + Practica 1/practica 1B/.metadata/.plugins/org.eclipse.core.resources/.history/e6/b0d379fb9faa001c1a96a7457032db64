@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Ejercicio2 {
+	
+	public static void main (String [] args) {
+		Scanner sc = new Scanner(System.in);
+		int[] arreglo = elArregloPa();
+		for (int n = 0; n < arreglo.length; n++) {
+			System.out.print(arreglo[n]);
+		}
+	}
+	
+	public int[] elArregloPa(int n) {
+		int[] arreglo = new int[n];
+		for (int i = 1; i < n; n++) {
+			arreglo[i-1] = i * n;
+		}
+		return arreglo;
+	}
+	
+}

@@ -1,0 +1,7 @@
+
+public class Ejercicio5 {
+	static int[] arreglo = new int[] {4,23,64,2,62};
+	public static void main(String [] args) {
+		
+	}
+}

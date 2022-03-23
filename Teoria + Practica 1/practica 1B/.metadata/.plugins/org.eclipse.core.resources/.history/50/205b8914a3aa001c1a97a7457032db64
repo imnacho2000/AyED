@@ -1,0 +1,45 @@
+
+public class Ejercicio5 {
+	public static void main(String [] args) {
+		int[] arreglo = new int[] {4,23,64,2,62};
+		Datos resultado = new Datos();
+		System.out.println("Con Return: ");
+		System.out.println(calculateEsta(arreglo));
+		System.out.println("Sin parametro de tipo vector: ");
+		
+		System.out.println("Maximo: " + resultado.getMaximo() + " Minimo: " + resultado.getMinimo() + " Promedio: " + resultado.getPromedio());
+	}
+	
+	public static String calculateEsta(int[] arreglo) {
+		int min = 9999;
+		int max = -1;
+		int suma = 0;
+		int promedio = 0;
+		for (int n = 0; n < arreglo.length ; n++) {
+			if(arreglo[n] > max) {
+				max = arreglo[n];
+			}
+			if(arreglo[n] < min) {
+				min = arreglo[n];
+			}
+			suma += arreglo[n];
+		}
+		promedio = suma/arreglo.length;
+		return "Maximo: " + max + " Minimo: " + min + " Promedio: " + promedio;
+	}
+	
+	public static String calculateEsta(Datos resultado) {
+		int suma = 0;
+		for (int n = 0; n < arreglo.length ; n++) {
+			if(arreglo[n] > resultado.getMaximo()) {
+				resultado.setMaximo(arreglo[n]); 
+			}
+			if(arreglo[n] < resultado.getMinimo()) {
+				resultado.setMinimo(arreglo[n]);
+			}
+			suma += arreglo[n];
+		}
+		resultado.setPromedio(suma/arreglo.length;);
+		
+	}
+}

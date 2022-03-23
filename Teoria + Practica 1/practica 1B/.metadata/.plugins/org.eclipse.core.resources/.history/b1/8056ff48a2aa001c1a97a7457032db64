@@ -1,0 +1,23 @@
+
+public class Ejercicio5 {
+	static int[] arreglo = new int[] {4,23,64,2,62};
+	public static void main(String [] args) {
+		System.out.print();
+	}
+	
+	public static String calculateEsta() {
+		int min = 9999;
+		int max = -1;
+		int suma = 0;
+		int promedio = 0;
+		for (int n = 0; n < arreglo.length ; n++) {
+			if(arreglo[n] > max) {
+				max = arreglo[n];
+			}
+			if(arreglo[n] < min) {
+				min = arreglo[n];
+			}
+			suma += arreglo[n];
+		}
+	}
+}

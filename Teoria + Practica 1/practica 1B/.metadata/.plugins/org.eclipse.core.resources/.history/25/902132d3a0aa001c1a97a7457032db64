@@ -1,0 +1,8 @@
+
+public class Test {
+	public static void main(String [] args) {
+		Alumno alumnoUno = new Alumno("Miqueas","Brambilla","Micky@gmail.com","esta",5);
+		Alumno alumnoDos = new Alumno("Ignacio","Carrera","Nachis@gmail.com","esta",3);
+		Profesor profesorUno = new Profesor("Ricky","Fort","Belleza y moda","Ricky@gmail.com","Humanidades");
+	}
+}

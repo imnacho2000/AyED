@@ -1,0 +1,64 @@
+
+public class Ejercicio5 {
+	static int[] arreglo = new int[] {4,23,64,2,62};
+	public static void main(String [] args) {
+		Datos resultado = new Datos();
+		System.out.println("Con Return: ");
+		System.out.println(calcularUno(arreglo));
+		System.out.println("Sin parametro de tipo vector: ");
+		calcularDos(resultado);
+		System.out.println("Maximo: " + resultado.getMaximo() + " Minimo: " + resultado.getMinimo() + " Promedio: " + resultado.getPromedio());
+		System.out.println("Sin parametros, ni return");
+		calcularTres();
+	}
+	
+	public static String calcularUno(int[] arreglo) {
+		int min = 9999;
+		int max = -1;
+		int suma = 0;
+		int promedio = 0;
+		for (int n = 0; n < arreglo.length ; n++) {
+			if(arreglo[n] > max) {
+				max = arreglo[n];
+			}
+			if(arreglo[n] < min) {
+				min = arreglo[n];
+			}
+			suma += arreglo[n];
+		}
+		promedio = suma/arreglo.length;
+		return "Maximo: " + max + " Minimo: " + min + " Promedio: " + promedio;
+	}
+	
+	public static void calcularDos(Datos resultado) {
+		int suma = 0;
+		for (int n = 0; n < arreglo.length ; n++) {
+			if(arreglo[n] > resultado.getMaximo()) {
+				resultado.setMaximo(arreglo[n]); 
+			}
+			if(arreglo[n] < resultado.getMinimo()) {
+				resultado.setMinimo(arreglo[n]);
+			}
+			suma += arreglo[n];
+		}
+		resultado.setPromedio(suma/arreglo.length);
+	}
+	
+	public static void calcularTres() {
+		int min = 9999;
+		int max = -1;
+		int suma = 0;
+		int promedio = 0;
+		for (int n = 0; n < arreglo.length ; n++) {
+			if(arreglo[n] > max) {
+				max = arreglo[n];
+			}
+			if(arreglo[n] < min) {
+				min = arreglo[n];
+			}
+			suma += arreglo[n];
+		}
+		promedio = suma/arreglo.length;
+		System.out.print("Maximo: " + max + " Minimo: " + min + " Promedio: " + promedio);
+	}
+}
