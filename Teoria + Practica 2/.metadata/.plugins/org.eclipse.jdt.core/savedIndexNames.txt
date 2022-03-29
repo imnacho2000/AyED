@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\ignac\OneDrive\Escritorio\AyED\Teoria + Practica 2\.metadata\.plugins\org.eclipse.jdt.core
+421282516.index
+1865797976.index
+3239923045.index

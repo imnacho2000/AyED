@@ -1,0 +1,15 @@
+package tests;
+
+import java.util.Scanner;
+
+import tp02.ejercicio1.ListaDeEnterosConArreglos;
+
+public class TestListaDeEnterosConArreglos {
+	public static void main (String []args){
+		ListaDeEnterosConArreglos[] lista = new ListaDeEnterosConArreglos[10];
+		ListaDeEnterosConArreglos[] secuenciaNumeros = new ListaDeEnterosConArreglos[10]{1,2,3,4,3,2,3,15.1,4};
+		for (int n = 0; n < 10; n++) {			
+			lista[n] = secuenciaNumeros[n];
+		}
+	}
+}

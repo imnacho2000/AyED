@@ -1,0 +1,27 @@
+package tests;
+
+
+
+import java.util.Scanner;
+import tp02.ejercicio1.*;
+
+
+
+
+public class TestListaDeEnterosConArreglos {
+	public static void main (String []args){
+		ListaDeEnterosConArreglos lista = new ListaDeEnterosConArreglos();
+		lista.comenzar();
+		Scanner sc = new Scanner(System.in);
+		Integer secuencia;
+		for (int n = 0; n < 10; n++) {
+			System.out.print("Ingrese un numero: ");
+			secuencia = sc.nextInt();
+			lista.agregarFinal(secuencia);
+		}
+		sc.close();
+		for (int n = 0; n < 10; n++) {
+			System.out.print(lista.elemento(n));
+		}
+	}
+}

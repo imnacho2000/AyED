@@ -1,0 +1,29 @@
+package tests;
+
+import tp02.ejercicio1.ListaDeEnterosEnlazada;
+
+public class Ejercicio1_6 { 
+	static ListaDeEnterosEnlazada lista = new ListaDeEnterosEnlazada();
+	public static void main(String [] args) {
+		lista.comenzar();
+		ListaDeEnterosEnlazada listaDos = calcularSucesion(6);
+		for(int n = 0; n < 5; n++) {
+			System.out.println(listaDos.elemento(n));
+		}
+	}
+	
+	public static ListaDeEnterosEnlazada calcularSucesion (Integer n) {
+		if(n != 0) {
+			if(n % 2 == 0) {
+				lista.agregarFinal(n / 2);
+				calcularSucesion(n / 2);
+			}
+			else {
+				lista.agregarFinal(3 * n + 1);
+				calcularSucesion(3 * n + 1);
+			}
+		}
+		return lista;
+	}
+
+}
