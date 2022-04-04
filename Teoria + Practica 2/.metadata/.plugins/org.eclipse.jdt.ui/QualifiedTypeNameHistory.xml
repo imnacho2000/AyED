@@ -4,4 +4,6 @@
     <fullyQualifiedTypeName name="tp02.ejercicio1.ListaDeEnteros"/>
     <fullyQualifiedTypeName name="tp02.ejercicio1.ListaDeEnterosEnlazada"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="tp02.ejercicio2.ListaEnlazadaGenerica"/>
+    <fullyQualifiedTypeName name="tp02.ejercicio2.Alumno"/>
 </qualifiedTypeNameHistroy>

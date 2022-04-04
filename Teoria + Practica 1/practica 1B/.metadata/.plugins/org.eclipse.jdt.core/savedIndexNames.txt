@@ -4,3 +4,4 @@ INDEX VERSION 1.131+C:\Users\ignac\OneDrive\Escritorio\AyED\Teoria + Practica 1\
 1650688248.index
 2356011476.index
 358920302.index
+3966092118.index

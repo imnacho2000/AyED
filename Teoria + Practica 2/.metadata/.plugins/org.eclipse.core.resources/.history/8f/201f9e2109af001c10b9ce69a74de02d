@@ -1,0 +1,12 @@
+package tests;
+
+import tp02.ejercicio2.Alumno;
+
+public class TestListaEnlazadaGenerica {
+	public static void main(String [] args) {
+		Alumno alumnoUno = new Alumno("Miqueas","Brambilla","Micky@gmail.com","esta",5);
+		Alumno alumnoDos = new Alumno("Ignacio","Carrera","Nachis@gmail.com","esta",3);
+		Alumno alumnoTres = new Alumno("Dante","Fernandez","DanteFdz@gmail.com","esta",6);
+		Alumno alumnoCuatro = new Alumno("Julian","Order","july@gmail.com","esta",3);
+	}
+}
