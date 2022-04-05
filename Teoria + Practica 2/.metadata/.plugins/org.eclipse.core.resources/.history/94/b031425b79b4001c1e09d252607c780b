@@ -1,0 +1,30 @@
+package tp02.ejercicio3;
+
+import tp02.ejercicio2.ListaEnlazadaGenerica;
+
+public class ColaGenerica<T> {
+	private ListaEnlazadaGenerica<T> datos;
+	
+	public ColaGenerica() {
+		this.datos.comenzar();
+	}
+	
+	public void encolar(T dato) {
+		this.datos.agregarInicio(dato);
+	}
+	
+	public T desencolar() {
+		T dato = this.datos.elemento(0);
+		this.datos.eliminarEn(0);
+		return dato;
+	}
+	
+	public T tope() {
+		return this.datos.elemento(0);
+	}
+	
+	public boolean esVacia() {
+		return this.datos.esVacia();
+	}
+	
+}

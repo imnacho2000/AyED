@@ -1,0 +1,27 @@
+package tp02.ejercicio3;
+
+import tp02.ejercicio2.ListaGenerica;
+
+public class PilaGenerica<T> {
+	private ListaGenerica<T> datos;
+	
+	public PilaGenerica() {
+	}
+	
+	public void apilar(T dato) {
+		this.datos.agregarInicio(dato);
+	}
+	
+	public T desapilar() {
+		T datp = this.datos.elemento(0);
+		this.datos.eliminarEn(0);
+	}
+	
+	public T tope() {
+		return this.datos.elemento(0);
+	}
+	
+	public boolean esVacia() {
+		return this.datos.esVacia();
+	}
+}

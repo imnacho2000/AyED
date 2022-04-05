@@ -1,0 +1,12 @@
+package tp02.ejercicio3;
+
+import tp02.ejercicio2.ListaGenerica;
+
+public class ColaGenerica {
+	private ListaGenerica<T> datos;
+	
+	public ColaGenerica() {
+		this.datos = new
+	}
+	
+}

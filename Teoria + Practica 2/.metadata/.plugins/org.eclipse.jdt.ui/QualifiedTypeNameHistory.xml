@@ -3,7 +3,9 @@
     <fullyQualifiedTypeName name="tp02.ejercicio1.ListaDeEnterosConArreglos"/>
     <fullyQualifiedTypeName name="tp02.ejercicio1.ListaDeEnteros"/>
     <fullyQualifiedTypeName name="tp02.ejercicio1.ListaDeEnterosEnlazada"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="tp02.ejercicio2.ListaEnlazadaGenerica"/>
     <fullyQualifiedTypeName name="tp02.ejercicio2.Alumno"/>
+    <fullyQualifiedTypeName name="tp02.ejercicio2.ListaGenerica"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="tp02.ejercicio3.PilaGenerica"/>
+    <fullyQualifiedTypeName name="tp02.ejercicio2.ListaEnlazadaGenerica"/>
 </qualifiedTypeNameHistroy>

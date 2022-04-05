@@ -1,0 +1,19 @@
+package tp02.ejercicio3;
+
+import tp02.ejercicio2.ListaGenerica;
+
+public class ColaGenerica<T> {
+	private ListaGenerica<T> datos;
+	
+	public ColaGenerica() {
+	}
+	
+	public void encolar(T dato) {
+		this.datos.agregarInicio(dato);
+	}
+	
+	public void desencolar(T dato) {
+		this.datos.eliminarEn(0);
+	}
+	
+}
