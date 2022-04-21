@@ -1,0 +1,35 @@
+package tp03.ejercicio1;
+
+import tp02.ejercicio2.ListaEnlazadaGenerica;
+import tp02.ejercicio2.ListaGenerica;
+
+public class ContadorArbol {
+	private ArbolBinario<Integer> arbol;
+	
+	public ContadorArbol() {
+	}
+	
+	public ContadorArbol(ArbolBinario<Integer> arbol) {
+		this.arbol = arbol;
+	}
+	
+	public ListaGenerica<Integer> numerosPares(){
+		if(!arbol.esVacio()) {
+			ListaGenerica<Integer> lista = new ListaEnlazadaGenerica<Integer>();
+			lista.comenzar();
+			numeros(lista,arbol);
+			return lista;
+		}
+		return null;
+	}
+	
+	public void numeros(ListaGenerica<Integer> lista, ArbolBinario<Integer> arbol) {
+		if(!this.arbol.esVacio()) {
+			numeros(lista,arbol.getHijoIzquierdo());
+			if(this.arbol.getDato() % 2 == 0 ) {
+				lista.agregarFinal(arbol.getDato());
+			}
+			numeros(lista,arbol.getHijoDerecho());
+		}
+	}
+}
