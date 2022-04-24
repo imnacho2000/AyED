@@ -1,0 +1,27 @@
+package tp03.ejercicio1;
+
+public class RedBinariaLlena {
+	ArbolBinario<Integer> arbol;
+	
+	public RedBinariaLlena() {
+		
+	}
+	
+	public RedBinariaLlena(ArbolBinario<Integer> arbol) {
+		this.arbol = arbol;
+	}
+	
+	public int retardoReenvio(ArbolBinario<Integer> arbol) {
+		int max1 = arbol.getDato();
+		int max2 = arbol.getDato();
+		if(!this.arbol.esHoja()) {
+			max1 += retardoReenvio(arbol.getHijoIzquierdo());
+			max2 += retardoReenvio(arbol.getHijoDerecho());
+		}
+		
+		return Math.max(max1, max2);
+	}
+	
+	public 
+	
+}

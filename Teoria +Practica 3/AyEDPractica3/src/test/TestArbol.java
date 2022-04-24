@@ -2,26 +2,29 @@ package test;
 import tp02.ejercicio2.ListaEnlazadaGenerica;
 import tp03.ejercicio1.ArbolBinario;
 import tp03.ejercicio1.ContadorArbol;
+import tp03.ejercicio1.ProfundidadArbolBinario;
+import tp03.ejercicio1.RedBinariaLlena;
 
 public class TestArbol {
 	public static void main (String[]args) {
-		ArbolBinario<Integer> arbol = new ArbolBinario<Integer>(4);
-		ArbolBinario<Integer> arbol1 = new ArbolBinario<Integer>(7);
-		ArbolBinario<Integer> arbol2 = new ArbolBinario<Integer>(3);
-		ArbolBinario<Integer> arbol3 = new ArbolBinario<Integer>(2);
-		ArbolBinario<Integer> arbol4 = new ArbolBinario<Integer>(1);
-		ArbolBinario<Integer> arbol5 = new ArbolBinario<Integer>(60);
-		ArbolBinario<Integer> arbol6 = new ArbolBinario<Integer>(66);
+		ArbolBinario<Integer> arbol = new ArbolBinario<Integer>(12);
+		ArbolBinario<Integer> arbol15 = new ArbolBinario<Integer>(15);
+		ArbolBinario<Integer> arbol13 = new ArbolBinario<Integer>(13);
+		ArbolBinario<Integer> arbol10 = new ArbolBinario<Integer>(10);
+		ArbolBinario<Integer> arbol9 = new ArbolBinario<Integer>(9);
+		ArbolBinario<Integer> arbol11 = new ArbolBinario<Integer>(11);
+		ArbolBinario<Integer> arbol16 = new ArbolBinario<Integer>(16);
 		
 		ArbolBinario<Integer> arbolEspejo = new ArbolBinario<Integer>();
 		
-		arbol.agregarHijoDerecho(arbol1);
-		arbol1.agregarHijoDerecho(arbol5);
-		arbol5.agregarHijoDerecho(arbol6);
+		arbol.agregarHijoDerecho(arbol15);
+		arbol15.agregarHijoDerecho(arbol16);
+		arbol15.agregarHijoIzquierdo(arbol13);
 		
-		arbol.agregarHijoIzquierdo(arbol2);
-		arbol2.agregarHijoIzquierdo(arbol3);
-		arbol3.agregarHijoIzquierdo(arbol4);
+		
+		arbol.agregarHijoIzquierdo(arbol10);
+		arbol10.agregarHijoIzquierdo(arbol9);
+		arbol10.agregarHijoDerecho(arbol11);
 		
 		System.out.println("La cantidad de hojas es: " + arbol.contarHojas());
 		arbol.enOrden();
@@ -48,6 +51,16 @@ public class TestArbol {
 		for (int n = 1; n <= listaEnPostOrden.tamanio(); n++) {
 			System.out.println(listaEnPostOrden.elemento(n));
 		}
+		
+		RedBinariaLlena resultaRetardo = new RedBinariaLlena();	
+		
+		System.out.println("Resultado de retardo de reenvio: " + resultaRetardo.retardoReenvio(arbol));	
+		
+		System.out.println("Resultado entre niveles: ");
+		arbol.entreNiveles(0, 1);
+		
+		ProfundidadArbolBinario resultadoProfundidad = new ProfundidadArbolBinario(arbol);
+		System.out.println("El resultado de la profundidad de 2 es: " + resultadoProfundidad.sumaElementosProfundidad(2));
 		
 		
 		

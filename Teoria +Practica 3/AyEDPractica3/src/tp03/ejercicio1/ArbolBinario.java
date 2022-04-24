@@ -1,8 +1,6 @@
 package tp03.ejercicio1;
 
-import tp02.ejercicio2.ListaGenerica;
 import tp02.ejercicio3.ColaGenerica;
-import tp02.ejercicio2.ListaEnlazadaGenerica;
 
 public class ArbolBinario<T> {
 	private T dato;
@@ -117,43 +115,39 @@ public class ArbolBinario<T> {
 	}
 
 
-	public void entreNiveles(int n, int m){
-		int nivel = 0;
-		ListaGenerica<T> listaPorNiveles = new ListaEnlazadaGenerica<T>();
-		ListaGenerica<ListaGenerica<T>> listaFinal = new ListaEnlazadaGenerica<ListaGenerica<T>>();
+    public void entreNiveles(int n, int m){
+		
 		ColaGenerica<ArbolBinario<T>> cola = new ColaGenerica<ArbolBinario<T>>();
-		ArbolBinario<T> arbol = null;
+		ArbolBinario<T> arbol;
+		
 		cola.encolar(this);
 		cola.encolar(null);
-		boolean termino = false;
-		while((!cola.esVacia()) & (!termino)) {
+		
+		int nivel = 0;
+	
+		while(!cola.esVacia()) {
 			arbol = cola.desencolar();
+			
 			if(arbol != null) {
 				if((nivel >= n) & (nivel <= m)) {
-					listaPorNiveles.agregarFinal(arbol.getDato());
-					if(arbol.tieneHijoIzquierdo()) {
-						listaPorNiveles.agregarFinal(arbol.getHijoIzquierdo().getDato());
-					}
-					if(arbol.tieneHijoDerecho()) {
-						listaPorNiveles.agregarFinal(arbol.getHijoDerecho().getDato());
-					}
+					System.out.println(arbol.getDato());
 				}
-			}
 				
-				listaFinal.agregarFinal(listaPorNiveles);
-				listaPorNiveles = new ListaEnlazadaGenerica<T>(); 
-				nivel++;
-			
-				if(!cola.esVacia()){
+				if(arbol.tieneHijoIzquierdo()) {
+					cola.encolar(arbol.getHijoIzquierdo());
+				}
+				
+				if(arbol.tieneHijoDerecho()) {
+					cola.encolar(arbol.getHijoDerecho());
+				}
+				
+			}
+			else {
+				if(nivel <= m){
+					nivel++;
 					cola.encolar(null);
-					if(nivel > m) {
-						termino = true;
-					}
 				}
 			}
-		
-		for(int i = 0; i < listaFinal.tamanio(); i++) {			
-			System.out.println(listaFinal.elemento(i));
 		}
 		
 	}

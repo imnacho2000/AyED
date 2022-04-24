@@ -1,0 +1,13 @@
+package tp03.ejercicio1;
+
+public class RedBinariaLlena {
+	ArbolBinario<Integer> arbol;
+	
+	public RedBinariaLlena() {
+		
+	}
+	
+	public RedBinariaLlena(ArbolBinario<Integer> arbol) {
+		this.arbol = arbol;
+	}
+}

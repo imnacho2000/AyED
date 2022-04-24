@@ -3,11 +3,15 @@ package tp02.ejercicio3;
 import tp02.ejercicio2.ListaEnlazadaGenerica;
 
 public class ColaGenerica<T> {
-	private ListaEnlazadaGenerica<T> datos = new ListaEnlazadaGenerica<T>();
+	private ListaEnlazadaGenerica<T> datos;
 	
+	public ColaGenerica(){
+		this.datos = new ListaEnlazadaGenerica<T>();
+		this.datos.comenzar();
+	}
 	
 	public void encolar(T dato) {
-		this.datos.agregarInicio(dato);
+		this.datos.agregarFinal(dato);
 	}
 	
 	public T desencolar() {

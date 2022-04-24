@@ -1,0 +1,44 @@
+package tp03.ejercicio1;
+
+import tp02.ejercicio2.ListaEnlazadaGenerica;
+import tp02.ejercicio3.ColaGenerica;
+
+public class ProfundidadArbolBinario {
+	ArbolBinario<Integer> arbol;
+	
+	public ProfundidadArbolBinario() {
+		
+	}
+	
+	public ProfundidadArbolBinario(ArbolBinario<Integer> dato) {
+		this.arbol = dato;
+	}
+	
+	
+	public int calcularProfundidad(ArbolBinario<Integer> arbol,int p) {
+		ArbolBinario<Integer> arbolAux = arbol;
+		ColaGenerica<ArbolBinario<Integer>> cola = new ColaGenerica<ArbolBinario<Integer>>();
+		cola.encolar(arbol);
+		int nivel = 0;
+		int resultado = 0;
+		while ((!cola.esVacia())) {
+			arbolAux = cola.desencolar();
+			if(arbolAux != null) {
+				if(arbolAux.getDato() == p) {
+					resultado += arbol.getDato();
+				}
+				if(arbol.tieneHijoIzquierdo()) {
+					calcularProfundidad(arbolAux.getHijoIzquierdo(), p);
+				}
+				if(arbol.tieneHijoDerecho()) {
+					calcularProfundidad(arbolAux.getHijoDerecho(), p);
+				}
+			}
+			if(nivel < p) {
+				nivel++;
+				cola.encolar(null);
+			}
+		}
+		return resultado;
+	}
+}
