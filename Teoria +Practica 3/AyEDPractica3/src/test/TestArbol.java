@@ -56,7 +56,7 @@ public class TestArbol {
 		
 		System.out.println("Resultado de retardo de reenvio: " + resultaRetardo.retardoReenvio(arbol));	
 		
-		System.out.println("Resultado entre niveles: ");
+		System.out.println("Resultado entre niveles 0 y 1: ");
 		arbol.entreNiveles(0, 1);
 		
 		ProfundidadArbolBinario resultadoProfundidad = new ProfundidadArbolBinario(arbol);
