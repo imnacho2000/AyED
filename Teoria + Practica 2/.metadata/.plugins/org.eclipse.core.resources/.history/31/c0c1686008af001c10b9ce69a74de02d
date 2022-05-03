@@ -1,8 +1,0 @@
-package tests;
-
-
-import tp02.ejercicio2.ListaEnlazadaGenerica;
-
-public class Ejercicio1_6 {
-	static ListaEnlazadaGenerica lista = new ListaEnlazadaGenerica ();
-}
