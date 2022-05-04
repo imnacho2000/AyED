@@ -6,18 +6,18 @@ import tp02.ejercicio2.ListaGenerica;
 public class Test {
 	
 	public static void main(String []args) {
-		ArbolGeneral<Integer> arbol13 = new ArbolGeneral<Integer>(13);
-		ArbolGeneral<Integer> arbol15 = new ArbolGeneral<Integer>(15);
-		ArbolGeneral<Integer> arbol17 = new ArbolGeneral<Integer>(17);
-		ArbolGeneral<Integer> arbol18 = new ArbolGeneral<Integer>(18);
-		ArbolGeneral<Integer> arbol19 = new ArbolGeneral<Integer>(19);
+		ArbolGeneral<String> arbol13 = new ArbolGeneral<String>("B");
+		ArbolGeneral<String> arbol15 = new ArbolGeneral<String>(15);
+		ArbolGeneral<String> arbol17 = new ArbolGeneral<String>(17);
+		ArbolGeneral<String> arbol18 = new ArbolGeneral<String>(18);
+		ArbolGeneral<String> arbol19 = new ArbolGeneral<String>(19);
 		
-		ArbolGeneral<Integer> arbol7 = new ArbolGeneral<Integer>(7);
-		ArbolGeneral<Integer> arbol11 = new ArbolGeneral<Integer>(11);
-		ArbolGeneral<Integer> arbol14 = new ArbolGeneral<Integer>(14);
-		ArbolGeneral<Integer> arbol16 = new ArbolGeneral<Integer>(16);
+		ArbolGeneral<String> arbol7 = new ArbolGeneral<String>(7);
+		ArbolGeneral<String> arbol11 = new ArbolGeneral<String>(11);
+		ArbolGeneral<String> arbol14 = new ArbolGeneral<String>(14);
+		ArbolGeneral<String> arbol16 = new ArbolGeneral<String>(16);
 		
-		ListaGenerica<ArbolGeneral<Integer>> hijos = new ListaEnlazadaGenerica<ArbolGeneral<Integer>>();
+		ListaGenerica<ArbolGeneral<String>> hijos = new ListaEnlazadaGenerica<ArbolGeneral<String>>();
 		
 		hijos.agregarFinal(arbol13);
 		hijos.agregarFinal(arbol15);
